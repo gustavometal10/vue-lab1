@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div :value="token"></div>
-    <button @click="methodK">setar token aqui !!!</button>
+    <button @click="setToken(tokenInput)">setar token aqui !!!</button>
     <div>{{ this.stToken }} ---- {{this.tokenInput}}</div>
     <input type="text" v-model="tokenInput">
 
@@ -36,9 +36,9 @@ export default {
     ...mapActions([
       'setToken',
     ]),
-    methodK() {
-      this.setToken(this.tokenInput);
-    },
+    // methodK() {
+    //   this.setToken(this.tokenInput);
+    // },
   },
 };
 </script>
