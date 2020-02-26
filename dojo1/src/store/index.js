@@ -39,5 +39,9 @@ export default new Vuex.Store({
     setLocale({ commit }, locale) {
       commit('setLanguage', locale);
     },
+    selfDestroy({ commit }) {
+      commit('setToken', null);
+      commit('setEmail', null);
+    },
   },
 });
