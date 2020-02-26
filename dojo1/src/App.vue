@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
+      <router-link v-if="this.stToken === '123456'" to="/">Home</router-link> |
+      <router-link v-if="this.stToken === '123456'" to="/about">About</router-link> |
       <router-link to="/login">Login</router-link> |
-      <router-link to="/dashboard">Dash</router-link> |
-      <router-link to="/logoff">Logoff</router-link>
+      <router-link v-if="this.stToken === '123456'" to="/dashboard">Dashboard</router-link> |
+      <router-link v-if="this.stToken === '123456'" to="/logoff">Logoff</router-link>
     </div>
     <router-view/>
   </div>
@@ -34,3 +34,16 @@
   color: #42b983;
 }
 </style>
+
+<script>
+import { mapGetters } from 'vuex';
+
+export default {
+
+
+  computed: {
+    ...mapGetters(['stToken']),
+  },
+
+};
+</script>
