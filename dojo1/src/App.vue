@@ -4,7 +4,7 @@
       <router-link v-if="this.stToken === '123456'" to="/">Home</router-link> |
       <router-link v-if="this.stToken === '123456'" to="/about">About</router-link> |
       <router-link to="/login">Login</router-link> |
-      <router-link v-if="this.stToken === '123456'" to="/dashboard">Dash</router-link> |
+      <router-link v-if="this.stToken === '123456'" to="/dashboard">Dashboard</router-link> |
       <router-link v-if="this.stToken === '123456'" to="/logoff">Logoff</router-link>
     </div>
     <router-view/>
