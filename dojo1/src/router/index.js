@@ -5,6 +5,8 @@ import Login from '../views/Login.vue';
 import About from '../views/About.vue';
 import Logoff from '../views/Logoff.vue';
 import Dashboard from '../views/Dashboard.vue';
+import Testes from '../views/Testes.vue';
+
 import store from '../store';
 
 
@@ -50,6 +52,11 @@ const routes = [
     path: '/dashboard',
     name: 'dashboard',
     component: Dashboard,
+  },
+  {
+    path: '/testes',
+    name: 'Testes',
+    component: Testes,
   },
 ];
 
